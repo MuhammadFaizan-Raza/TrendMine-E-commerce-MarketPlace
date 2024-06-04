@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="Style.css" />
+    <title>Collection Centre Management</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-header">
+        <h1>Collection Centre Order View</h1>
+      </header>
+      <main>
+        <div class="row-container">
+          <div class="column">
+            <label class="order_id" for="orderId">Order ID:</label>
+            <select id="orderId" class="input-field">
+              <option value="Order001">Order001</option>
+              <option value="Order002">Order002</option>
+              <option value="Order003">Order003</option>
+            </select>
+          </div>
+          <div class="column">
+            <label class="user_id" for="userId">User ID:</label>
+            <label
+              type="text"
+              id="userId"
+              class="input-field"
+              readonly
+              value="UserID123"
+            ></label>
+          </div>
+        </div>
+        <div class="dual-container">
+          <div class="Order-summary">
+            <div class="column">
+              <h6>Order Summary</h6>
+            </div>
+            <div class="column">
+              <label for="orderDate">Order Date:</label>
+              <label
+                type="text"
+                id="orderDate"
+                class="input-field"
+                readonly
+                value="2024-01-12"
+              ></label>
+            </div>
+            <div class="column">
+              <label for="deliveryFee">Delivery Fee:</label>
+              <label
+                type="text"
+                id="deliveryFee"
+                class="input-field"
+                readonly
+                value="$5.00"
+              ></label>
+            </div>
+            <div class="column">
+              <label for="totalAmount">Total Amount:</label>
+              <label
+                type="text"
+                id="totalAmount"
+                class="input-field"
+                readonly
+                value="$95.00"
+              ></label>
+            </div>
+            <div class="column">
+              <label for="orderStatus">Order Status:</label>
+              <label
+                type="text"
+                id="orderStatus"
+                class="input-field"
+                readonly
+                value="Shipped"
+              ></label>
+            </div>
+          </div>
+          <div class="Customer-details">
+            <div class="customer-column">
+              <h6>Customer Details</h6>
+            </div>
+            <div class="customer-column">
+              <label for="customerName">Customer Name:</label>
+              <label
+                type="text"
+                id="customerName"
+                class="input-field"
+                readonly
+              ></label>
+            </div>
+            <div class="customer-column">
+              <label for="shippingAddress">Shipping Address:</label>
+              <textarea
+                id="shippingAddress"
+                class="input-field"
+                readonly
+              ></textarea>
+            </div>
+            <div class="customer-column">
+              <label for="contactInfo">Contact Info:</label>
+              <label
+                type="text"
+                id="contactInfo"
+                class="input-field"
+                readonly
+              ></label>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

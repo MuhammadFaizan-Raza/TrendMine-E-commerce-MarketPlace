@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="orderdetstyle.css" />
+    <title>TrendMine Marketplace</title>
+  </head>
+  <body>
+    <section id="header">
+      <a href="index2.html"><img src="img/logo.svg" alt="" class="logo"></a>
+      <div>
+          <ul id="navbar">
+              <li><a href="index2.html">Home</a></li>
+              <li><a href="shop.html">Shop</a></li>
+              
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+              <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+          </ul>
+      </div>
+  </section>
+    <div class="container">
+      <main>
+        <header class="page-header">
+          <h1>Order Details</h1>
+        </header>
+        <div class="row-container">
+        </div>
+        <div class="dual-container">
+          <div class="Order-summary">
+            <div class="column">
+              <h6>Order Summary</h6>
+            </div>
+            <div class="column">
+              <label for="orderDate">Order Date:</label>
+              <label
+                class="input-field"
+                readonly
+                >2024-01-12</label
+              >
+            </div>
+            <div class="column">
+              <label for="grossAmount">Gross Amount:</label>
+              <label
+                class="input-field"
+                readonly
+                >$100.00</label
+              >
+            </div>
+            <div class="column">
+              <label for="discountApplied">Discount Applied:</label>
+              <label
+                class="input-field"
+                readonly
+                >$10.00</label
+              >
+            </div>
+            <div class="column">
+              <label for="deliveryFee">Delivery Fee:</label>
+              <label
+                class="input-field"
+                readonly
+                >$5.00</label
+              >
+            </div>
+            <div class="column">
+              <label for="totalAmount">Total Amount:</label>
+              <label
+                class="input-field"
+                readonly
+                >$95.00</label
+              >
+            </div>
+            <div class="column">
+              <label for="offerType">Offer Type:</label>
+              <label
+                class="input-field"
+                readonly
+                >Discount</label
+              >
+            </div>
+            <div class="column">
+              <label for="orderStatus">Order Status:</label>
+              <label
+                class="input-field"
+                readonly
+                >Shipped</label
+              >
+            </div>
+          </div>
+          <div class="Customer-details">
+            <div class="customer-column">
+              <h6>Customer Details</h6>
+            </div>
+            <div class="customer-column">
+              <label for="customerName">Customer Name:</label>
+              <input
+                type="text"
+                id="customerName"
+                class="input-field"
+                
+              />
+            </div>
+            <div class="customer-column">
+              <label for="shippingAddress">Shipping Address:</label>
+              <textarea
+                id="shippingAddress"
+                class="input-field"
+                
+              ></textarea>
+            </div>
+            <div class="customerl-column">
+              <label for="contactInfo">Contact Info:</label>
+              <input
+                type="text"
+                id="contactInfo"
+                class="input-field"
+                
+              />
+            </div>
+            <div class="customer-column">
+              <a href="./Paymentmain.html" id="SubmitButton">Submit</a>
+          </div>
+          </div>
+        </div>
+        <section id="cart" class="section-p1">
+          <table width="100%">
+            <thead>
+              <tr>
+                <td>Product Id</td>
+                <td>Image</td>
+                <td>Product Name</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Subtotal</td>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1
+                </td>
+                <td><img src="img/products/f1.jpg" alt="" /></td>
+                <td>Cartoon Astronaut T-Shirt</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1" /></td>
+                <td>$118.19</td>
+              </tr>
+              <tr>
+                <td>
+                 2
+                </td>
+                <td><img src="img/products/f2.jpg" alt="" /></td>
+                <td>Cartoon Astronaut T-Shirt</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1" /></td>
+                <td>$118.19</td>
+              </tr>
+              <tr>
+                <td>
+                 3
+                </td>
+                <td><img src="img/products/f3.jpg" alt="" /></td>
+                <td>Cartoon Astronaut T-Shirt</td>
+                <td>$118.19</td>
+                <td><input type="number" value="1" /></td>
+                <td>$118.19</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

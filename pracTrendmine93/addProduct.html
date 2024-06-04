@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Insert Form</title>
+  <style>
+
+
+    
+
+
+
+
+
+
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #E9F1FA;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #form-container {
+      background-color: #FFFFFF;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      max-width: 500px;
+      width: 100%;
+      text-align: center;
+      
+    }
+
+    h2 {
+      color: #00ABE4;
+      margin-bottom: 20px;
+    }
+
+
+    label {
+      display: inline-block;
+      margin-bottom: 8px;
+      color: #555;
+      width: 150px; /* Add a width to create space between labels and inputs */
+      text-align: left;
+      font-weight:600;
+      vertical-align: top;/* Align labels to the right for a cleaner look */
+   }
+   
+
+   .size-container {
+    margin-bottom: 20px;
+  }
+
+  .size-box {
+    display: inline-block;
+    width: 50px; /* Adjust the width as needed */
+    height: 50px; /* Adjust the height as needed */
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 50px; /* Center the text vertically */
+    font-size: 14px;
+  }
+
+  .size-box:hover {
+    background-color: #F9F9F9;
+  }
+    
+    input, select, textarea {
+      width: 300px;
+      padding: 10px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #F9F9F9;
+      color: #555;
+      display: inline-block;
+    }
+
+
+    textarea {
+      height: 100px; /* Set a fixed height for the textarea */
+      overflow-y: auto; /* Enable vertical scroll when content overflows */
+    }
+    
+
+
+    .size-checkbox {
+      margin-right: 5px;
+    }
+
+    .color-box {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      margin-right: 5px;
+      cursor: pointer;
+      border: 1px solid #ddd;
+      border-radius: 3px;
+    }
+
+    button {
+      background-color: #00ABE4;
+      color: #FFFFFF;
+      padding: 12px;
+      margin:auto;
+      margin-top:15px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      display:block;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0077A9;
+    }
+  </style>
+</head>
+<body>
+  <div id="form-container">
+    <h2>Add Product</h2>
+    <form id="productForm">
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" name="productName" required>
+
+      <label for="productDescription">Product Description:</label>
+      <textarea id="productDescription" name="productDescription" required></textarea>
+
+      <label for="productManufacturer">Manufacturer:</label>
+      <input type="text" id="productManufacturer" name="productManufacturer" required>
+
+      <label for="productPrice">Price:</label>
+      <input type="number" id="productPrice" name="productPrice" step="0.01" required>
+
+      <label for="productCategory">Category:</label>
+      <select id="productCategory" name="productCategory" required>
+        <!-- Populate with categories from your database -->
+        <option value="1">Category 1</option>
+        <option value="2">Category 2</option>
+        <!-- Add more options as needed -->
+      </select>
+
+      <label for="productImage">Image URL:</label>
+      <input type="text" id="productImage" name="productImage" required>
+
+      <div class="size-container">
+        <label for="productSize">Size: </label>  
+        <div class="size-box" onclick="selectSize('S')">S</div>
+        <div class="size-box" onclick="selectSize('M')">M</div>
+        <div class="size-box" onclick="selectSize('L')">L</div>
+        <div class="size-box" onclick="selectSize('XL')">XL</div>
+      </div>
+      <label for="productColors">Colors:</label>
+      <div class="color-box" id="colorBox1" onclick="openColorPicker(1)" style="background-color: #00ABE4"></div>
+      <div class="color-box" id="colorBox2" onclick="openColorPicker(2)" style="background-color: #FF5733"></div>
+      <div class="color-box" id="colorBox3" onclick="openColorPicker(3)" style="background-color: #4CAF50"></div>
+
+      <input type="color" id="colorPicker" style="display: none;" onchange="changeColor()">
+
+      <button type="button" onclick="submitForm()">Add Product</button>
+    </form>
+  </div>
+
+  <script>
+    function submitForm() {
+      // Implement your JavaScript logic to submit the form data to the server
+      // You can use AJAX to send the data to the backend
+      alert("Form submitted!"); // Placeholder alert
+    }
+
+    function openColorPicker(boxNumber) {
+      document.getElementById("colorPicker").setAttribute("data-box-number", boxNumber);
+      document.getElementById("colorPicker").click();
+    }
+
+    function changeColor() {
+      const boxNumber = document.getElementById("colorPicker").getAttribute("data-box-number");
+      const color = document.getElementById("colorPicker").value;
+      document.getElementById(`colorBox${boxNumber}`).style.backgroundColor = color;
+    }
+    function selectSize(size) {
+      // Implement your logic for handling the selected size
+      if (size === 'S') {
+      alert("Selected Size: Small");
+    } else if (size === 'M') {
+      alert("Selected Size: Medium");
+    } else if (size === 'L') {
+      alert("Selected Size: Large");
+    } else if (size === 'XL') {
+      alert("Selected Size: Extra Large");
+    }
+    }
+  </script>
+</body>
+</html>

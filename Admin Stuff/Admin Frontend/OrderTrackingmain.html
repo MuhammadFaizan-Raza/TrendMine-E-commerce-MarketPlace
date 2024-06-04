@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Order Tracking</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-header">
+        <h1>Order Tracking</h1>
+      </header>
+    </div>
+    <div class="Viewcontainer">
+      <main>
+        <section id="sm-bannerol">
+          <div class="banner-boxol" onclick="redirectTowarehouse()">
+            <h2>WareHouse</h2>
+            <span>Click here to access warehouse panels</span>
+            <button class="white">Access</button>
+          </div>
+          <div class="banner-boxol2" onclick="redirectToCollection()">
+            <h2>Collection Centre</h2>
+            <span>Click here to access Collection centre panels</span>
+            <button class="white">Access</button>
+          </div>
+        </section>
+        <section id="sm-bannerol">
+          <div class="banner-boxol3" onclick="redirectToDelivery()">
+            <h2>Delivery</h2>
+            <span>Click here to access Delivery panels</span>
+            <button class="white">Access</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

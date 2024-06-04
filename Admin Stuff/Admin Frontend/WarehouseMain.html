@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Warehouse Management</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="page-header">
+        <h1>Warehouse</h1>
+      </header>
+    </div>
+    <div class="Viewcontainer">
+      <main>
+        <section id="sm-banner">
+          <div class="banner-box" onclick="redirectToWarehouseView()">
+            <h2>View Orders</h2>
+            <span>Click on the View button below to details of any order</span>
+            <button class="white">View</button>
+          </div>
+          <div class="banner-box2" onclick="redirectToUpdateOrderStatus()">
+            <h2>Update Order Status</h2>
+            <span
+              >Click on the View button below to Update status of any
+              order</span
+            >
+            <button class="white">Update</button>
+          </div>
+        </section>
+        <section id="sm-banner">
+          <div class="banner-box" onclick="redirectToUpdateReturnOrderStatus()">
+            <h2>Update Return Order Status</h2>
+            <span
+              >Click on the View button below to Update Return status of any
+              order</span
+            >
+            <button class="white">Update</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

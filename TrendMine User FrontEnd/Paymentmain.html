@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TrendMine Marketplace</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <script src="https://kit.fontawesome.com/e8fa2e31b4.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="Paymentmain.css" />
+</head>
+
+<body>
+    <section id="header">
+        <a href="index2.html"><img src="img/logo.svg" alt="" class="logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index2.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            </ul>
+        </div>
+    </section>
+    <div class="container">
+        <div class="left">
+            <p>Payment methods</p>
+            <hr style="border: 1px solid #ccc; margin: 0 15px" />
+            <div class="methods">
+                <div onclick="doFunA()" id="tColorA">
+                  <i class="fa-solid fa-credit-card"></i>
+                    Payment by card
+                </div>
+                <div onclick="doFunB()" id="tColorB">
+                  <i class="fa-brands fa-paypal"></i> Paypal Transaction
+                </div>
+                <div onclick="doFunC()" id="tColorC">
+                  <i class="fa-solid fa-money-bill-transfer"></i> Bank Transfer
+                </div>
+                <div onclick="doFunD()" id="tColorD">
+                  <i class="fa-solid fa-money-bill-wave"></i> Cash On delivery
+              </div>
+            </div>
+            <hr style="border: 1px solid #ccc; margin: 0 15px" />
+        </div>
+        <div class="center">
+            <a href="https://www.shift4shop.com/credit-card-logos.html"><img alt="Credit Card Logos"
+                    title="Credit Card Logos"
+                    src="https://www.shift4shop.com/images/credit-card-logos/cc-lg-4.png" width="250"
+                    height="auto" /></a>
+            <hr style="border: 1px solid #ccc; margin: 0 15px" />
+
+            <div class="card-details" id="payment-form">
+                <form>
+                    <div>
+                        <p>CNIC</p>
+                        <div class="cnic" id="cnic">
+                            <input id="cn-number" class="cnic-number" placeholder="CNIC" maxlength="14" required />
+                            <i class="fa-solid fa-credit-card" style="margin: 0"></i>
+                        </div>
+                        <p>Card Holder Name</p>
+                        <div class="c-name" id="c-name">
+                            <input id="name" class="cc-name" placeholder="Enter Name" maxlength="50" required />
+                            <i class="fa-solid fa-credit-card" style="margin: 0"></i>
+                        </div>
+                        <p>Card number</p>
+                        <div class="c-number" id="c-number">
+                            <input id="number" class="cc-number" placeholder="Card number" maxlength="19" required />
+                            <i class="fa-solid fa-credit-card" style="margin: 0"></i>
+                        </div>
+                    </div>
+                
+            
+
+                <div class="c-details">
+                  <div>
+                    <p>Expiry date</p>
+                    <input id="e-date" class="cc-exp" placeholder="MM/YY" required maxlength="5" required>
+                  </div>
+                  <div>
+                    <p>CVV</p>
+                    <div class="cvv-box" id="cvv-box">
+                      <input id="cvv" class="cc-cvv" placeholder="CVV" required maxlength="3" required>
+                      <i class="fa-solid fa-circle-question" title="3 digits on the back of the card" style="cursor: pointer;"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="email">
+                  <p>Email</p>
+                  <input type="email" placeholder="example@email.com" id="email" required>
+                </div>
+                <button onclick="payNow()">PAY NOW</button>
+              </form>
+            </div>
+          
+
+            <div class="paypal" style="display: none;">
+                <form>
+                  <div>
+              
+                    <div class="p-details">
+                        <div class="pemail">
+                            <p>Email</p>
+                            <input type="email" placeholder="example@email.com" id="email" required />
+                        </div>
+                        <button>PAY NOW</button>
+                    </div>
+                  </div>
+                </form>
+            </div>
+
+            <div class="banktransfer" id="bank-transfer-form" style="display: none;">
+                <form>
+                    <p>Bank Name</p>
+                    <div class="b-name" id="b-name">
+                        <input id="ba-name" class="bb-name" placeholder="Enter Bank Name" maxlength="30" required />
+                        <i class="fa-solid fa-credit-card" style="margin: 0"></i>
+                    </div>
+                    <p>Account Holder Name</p>
+                    <div class="A-name" id="A-name">
+                        <input id="ap-name" class="aa-name" placeholder="Enter Name" maxlength="30" required />
+                        <i class="fa-solid fa-credit-card" style="margin: 0"></i>
+                    </div>
+
+                    <p>Account Number or IBAN</p>
+                    <div class="AC-num" id="AC-num">
+                        <input id="ac-num" class="ac-num" placeholder="Enter Account Number or IBAN" maxlength="29"
+                            required />
+                        <i class="fa-solid fa-credit-card" style="margin: 0"></i>
+                    </div>
+
+                    <div class="B-details">
+                        <button>PAY NOW</button>
+                    </div>
+                </form>
+            </div>
+            <div class="COD" style="display: none;">
+              <button>COD</button>
+            </div>
+        </div>
+
+        <div class="right">
+            <p>Order Summary</p>
+            <div class="labelcontainer">
+                <label class="line1">Gross Amount: </label> <label class="line1">$100</label>
+                <label class="line2">Discount Applied: </label> <label class="line2">$20</label>
+                <label class="line3">Delivery Fee: </label> <label class="line3">$10</label>
+                <label class="line4">Total Amount: </label> <label class="line4">$90</label>
+            </div>
+
+            <hr style="border: 1px solid #ccc; margin: 0 15px" />
+        </div>
+    </div>
+    </div>
+
+    <script src="Paymentmain.js"></script>
+</body>
+
+</html>

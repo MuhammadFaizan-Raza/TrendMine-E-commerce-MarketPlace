@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>product Add</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800&amp;family=Poppins:wght@300;400;500;600;700;800;900&amp;family=Roboto:wght@400;500;700;900&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <link id="ekka-css" rel="stylesheet" href="assets/css/trendmind.css" />
+    <style>
+      .form-check input[type="checkbox"] {
+        position: relative;
+        left: 22px;
+        transform: scale(2);
+        opacity: 0.2;
+      }
+      button.btn {
+        margin: 20px 0 0 60px;
+      }
+    </style>
+  </head>
+  <body
+    class="ec-header-fixed ec-sidebar-fixed ec-sidebar-dark ec-header-light"
+    id="body"
+  >
+    <div class="wrapper">
+      <div class="ec-page-wrapper">
+        <div class="ec-content-wrapper">
+          <div class="content">
+            <div
+              class="breadcrumb-wrapper d-flex align-items-center justify-content-between"
+            >
+              <div>
+                <h1>Add Product</h1>
+                <p class="breadcrumbs">
+                  <span><a href="index.html">Home</a></span>
+                  <span><i class="mdi mdi-chevron-right"></i></span>Product
+                </p>
+              </div>
+              <div>
+                <a href="product-list.html" class="btn btn-primary">
+                  View All
+                </a>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-10">
+                <div class="card card-default">
+                  <div class="card-header card-header-border-bottom">
+                    <h2>Add Product</h2>
+                  </div>
+
+                  <div class="card-body">
+                    <div class="row ec-vendor-uploads">
+                      <div class="col-lg-4"></div>
+                      <div class="col-lg-10">
+                        <div class="ec-vendor-upload-detail">
+                          <form class="row g-3">
+                            <div class="col-md-6">
+                              <label for="productName" class="form-label"
+                                >Product Name</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="productName"
+                              />
+                            </div>
+                            <div class="col-md-6">
+                              <label for="inventoryID" class="form-label"
+                                >Inventory Number</label
+                              >
+                              <input
+                                list="inventoryNumbers"
+                                name="inventoryNumber"
+                                id="inventoryID"
+                                class="form-control"
+                              />
+                              <datalist id="inventoryNumbers">
+                                <option value="1"></option>
+                                <option value="2"></option>
+                                <option value="3"></option>
+                                <option value="4"></option>
+                              </datalist>
+                            </div>
+                            <div class="col-md-12">
+                              <label for="productDescription" class="form-label"
+                                >Product Description</label
+                              >
+                              <textarea
+                                class="form-control"
+                                id="productDescription"
+                                rows="2"
+                              ></textarea>
+                            </div>
+                            <div class="col-md-6">
+                              <label for="manufacturer" class="form-label"
+                                >Product Manufacturer</label
+                              >
+                              <input
+                                type="text"
+                                class="form-control"
+                                id="manufacturer"
+                              />
+                            </div>
+                            <div class="col-md-6">
+                              <label for="productPrice" class="form-label"
+                                >Product Price (USD)</label
+                              >
+                              <input
+                                type="number"
+                                class="form-control"
+                                id="productPrice"
+                              />
+                            </div>
+                            <div class="col-md-6">
+                              <label class="form-label">Product Category</label>
+                              <input
+                                list="productCategories"
+                                name="categories"
+                                id="Categories"
+                                class="form-control"
+                              />
+                              <datalist id="productCategories">
+                                <option value="T-shirt"></option>
+                                <option value="Dress"></option>
+                                <option value="Table"></option>
+                                <option value="Sofa"></option>
+                                <option value="I Phone"></option>
+                                <option value="Laptop"></option>
+                              </datalist>
+                            </div>
+                            <div class="col-md-6">
+                              <label class="form-label">Is Active</label>
+                              <div class="form-check">
+                                <input
+                                  class="form-check-input"
+                                  type="checkbox"
+                                  id="isActive"
+                                />
+                                <label class="form-check-label" for="isActive"
+                                  >Active</label
+                                >
+                              </div>
+                            </div>
+                            <div class="col-md-6">
+                              <label for="numberOfPoints" class="form-label"
+                                >Number Of Points</label
+                              >
+                              <input
+                                type="number"
+                                class="form-control"
+                                id="numberOfPoints"
+                              />
+                            </div>
+                            <div class="col-md-6">
+                              <label for="quantity" class="form-label"
+                                >Quantity</label
+                              >
+                              <input
+                                type="number"
+                                class="form-control"
+                                id="quantity"
+                              />
+                            </div>
+
+                            <div class="col-md-6">
+                              <label class="form-label">Size</label>
+                              <div class="form-checkbox-box">
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    type="checkbox"
+                                    name="size"
+                                    value="S"
+                                  />
+                                  <label>S</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    type="checkbox"
+                                    name="size"
+                                    value="M"
+                                  />
+                                  <label>M</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    type="checkbox"
+                                    name="size"
+                                    value="L"
+                                  />
+                                  <label>L</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                  <input
+                                    type="checkbox"
+                                    name="size"
+                                    value="XL"
+                                  />
+                                  <label>XL</label>
+                                </div>
+                              </div>
+                            </div>
+
+                            <div class="col-md-6">
+                              <label class="form-label">Colors</label>
+                              <input
+                                type="color"
+                                class="form-control form-control-color"
+                                id="colorInput1"
+                                value="#ff6191"
+                                title="Choose your color"
+                              />
+                              <input
+                                type="color"
+                                class="form-control form-control-color"
+                                id="colorInput2"
+                                value="#33317d"
+                                title="Choose your color"
+                              />
+                              <input
+                                type="color"
+                                class="form-control form-control-color"
+                                id="colorInput3"
+                                value="#56d4b7"
+                                title="Choose your color"
+                              />
+                              <input
+                                type="color"
+                                class="form-control form-control-color"
+                                id="colorInput4"
+                                value="#009688"
+                                title="Choose your color"
+                              />
+                            </div>
+                            <div class="col-md-12">
+                              <button type="submit" class="btn btn-primary">
+                                Submit
+                              </button>
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

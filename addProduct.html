@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Insert Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #E9F1FA;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #form-container {
+      background-color: #FFFFFF;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 16px;
+      box-sizing: border-box;
+    }
+
+    button {
+      background-color: #00ABE4;
+      color: #FFFFFF;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0077A9;
+    }
+  </style>
+</head>
+<body>
+  <div id="form-container">
+    <h2>Add Product</h2>
+    <form id="productForm">
+      <label for="productName">Product Name:</label>
+      <input type="text" id="productName" name="productName" required>
+
+      <label for="productDescription">Product Description:</label>
+      <textarea id="productDescription" name="productDescription" required></textarea>
+
+      <label for="productManufacturer">Manufacturer:</label>
+      <input type="text" id="productManufacturer" name="productManufacturer" required>
+
+      <label for="productPrice">Price:</label>
+      <input type="number" id="productPrice" name="productPrice" step="0.01" required>
+
+      <label for="productCategory">Category:</label>
+      <select id="productCategory" name="productCategory" required>
+        <!-- Populate with categories from your database -->
+        <option value="1">Category 1</option>
+        <option value="2">Category 2</option>
+        <!-- Add more options as needed -->
+      </select>
+
+      <label for="productImage">Image URL:</label>
+      <input type="text" id="productImage" name="productImage" required>
+
+      <label for="productSizes">Sizes:</label>
+      <input type="text" id="productSizes" name="productSizes" placeholder="e.g., Small, Medium, Large">
+
+      <label for="productColors">Colors:</label>
+      <input type="text" id="productColors" name="productColors" placeholder="e.g., Blue, Red, Green">
+
+      <button type="button" onclick="submitForm()">Add Product</button>
+    </form>
+  </div>
+
+  <script>
+    function submitForm() {
+      // Implement your JavaScript logic to submit the form data to the server
+      // You can use AJAX to send the data to the backend
+      alert("Form submitted!"); // Placeholder alert
+    }
+  </script>
+</body>
+</html>
